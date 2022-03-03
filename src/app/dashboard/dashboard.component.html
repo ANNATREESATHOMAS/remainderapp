@@ -1,0 +1,125 @@
+<body class="body3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white " routerLink="/dashboard">Remainder App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active text-white" aria-current="page" routerLink="/dashboard">Dashboard</a>
+          <a class="nav-link text-white" routerLink="/eventhistory">Events</a>
+          <a class="nav-link text-white" routerLink="/deleteevent">Delete</a>
+          <button (click)="logout()" >Logout</button>
+       </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <h5 class="text-white text-center text-secondary mt-5">“To achieve great things, two things are needed: a plan and not
+    quite enough time.” </h5>
+  
+    <!-- <p style="color: rgb(214, 214, 240);text-align: center;">Login Time(formatted):{{date|date:'short'}} </p> -->
+   
+
+<div class="container">
+  
+      <div class="row">
+        <div class="col-md-4 col-lg-4"></div>
+        <div class="col-md-4 col-lg-4">
+          <div class="card text-white text-center" style="height: 120px; width: 400px; background-color: rgb(101, 40, 12);">
+            <h5 class="card-header">Your Day</h5>
+
+            <div class="card-body text-white">
+              <p style="color: rgb(168, 168, 176);text-align: center;">Today :  {{date|date:'mediumDate'}} </p>
+
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4"></div>
+      </div>
+
+</div>
+
+  <div class="container-fluid" style="display: flex; justify-content:space-evenly ; ">
+
+
+
+    <div class="row  mt-5">
+      <div class="col-lg-6 col-md-6">
+        <div class="card text-white" style="height: 200px; width: 400px; background-color: rgb(31, 60, 61);">
+          <h5 class="card-header">New Remainder</h5>
+          <div class="card-body">
+            <p class="card-text">Add new events about you and your loved ones.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              style="background-color: rgb(36, 21, 56);">
+              Add Events
+            </button>
+          </div>
+        </div>
+
+        <!-- Button trigger modal -->
+
+
+  
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog "> 15)
+              <div class="modal-content text-white" style="background-color:rgb(91, 45, 45);">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add new events here</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form >
+                    <label for="eventName">Name your Event</label>
+                    <input type="text" id="eventName" name="eventName" formControlName="eventName" class="form-control"
+                      required=""><br>
+                      <div *ngIf="(this.eventForm.get('eventName')?.touched||this.eventForm.get('eventName')?.dirty)&& this.eventForm.get('eventName')?.errors" class="error">Invalid input</div>
+
+  
+                    <label for="eventDate">Date of the event</label>
+                    <input type="date" id="eventDate" name="eventDate" formControlName="eventDate" class="form-control"
+                      required=""><br>
+                      <div *ngIf="(this.eventForm.get('eventDate')?.touched||this.eventForm.get('eventDate')?.dirty)&& this.eventForm.get('eventDate')?.errors" class="error">Invalid input</div>
+
+
+                  <button type="submit" class="btn btn-secondary" style="background-color: rgb(132, 13, 13);">Save your
+                    Event</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+
+
+
+
+      <div class="col-lg-6 col-md-6">
+        <div class="card text-white" style="height: 200px; width: 400px; background-color: rgb(37, 44, 59);">
+          <h5 class="card-header">View Remainders</h5>
+          <div class="card-body">
+            <p class="card-text">View remainders for upcoming events.</p>
+            <a style="text-decoration: none;" routerLink="/eventhistory">View Events</a>
+
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+</body>

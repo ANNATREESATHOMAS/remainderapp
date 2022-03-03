@@ -1,0 +1,27 @@
+.body1{
+    background-image:url(./assets/image1.jpg);
+    background-size: cover;
+    height: 740px;
+}
+.body2{
+    background-image:url(./assets/image2.jpg);
+    background-size: cover;
+    height: 740px;
+   
+}
+.body3{
+    background-image:url(./assets/image3.jpg);
+    background-size: cover;
+    height: 740px;
+   
+}
+.eventhis{
+    background-image: url(./assets/image4.jpg);
+    background-size: cover;
+    height: 740px;
+}
+.eventdel{
+    background-image: url(./assets/image4.jpg);
+    background-size: cover;
+    height: 740px;
+}

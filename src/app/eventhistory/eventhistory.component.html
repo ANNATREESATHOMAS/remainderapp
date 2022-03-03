@@ -1,0 +1,43 @@
+<div class="text-white text-center eventhis">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white " routerLink="/dashboard">Remainder App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active text-white" aria-current="page" routerLink="/dashboard">Dashboard</a>
+              <a class="nav-link text-white" routerLink="/eventhistory">Events</a>
+              <a class="nav-link text-white"  routerLink="/deleteevent">Delete Events</a>
+              <a class="nav-link text-white" href="#">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <h3 style="color: rgb(110, 52, 172);">Events History</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl.No.</th>
+                <th>amount</th>
+                <th>type</th>
+            </tr>
+        </thead>
+    
+    
+        <tbody>
+            <tr *ngFor="let events of event; let i=index">
+                <th>{{i+1}}</th>
+                <th>{{events.eventName}}</th>
+                <th>{{events.eventDate}}</th>
+            </tr>
+        </tbody>
+    </table><br>
+    <a style="text-decoration:none; color: rgb(140, 140, 154); border: solid; background-color: rgb(58, 2, 78); width: 100px; margin-left: auto;margin-right: auto;" routerLink="register" routerLink="/dashboard">Dashboard</a>
+</div>
+
+
+
+

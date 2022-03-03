@@ -1,0 +1,23 @@
+<body class="body2" style="margin-top: -50px;">
+    
+   <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="row mt-5">
+            <div class="card bg bg-warning text-center " style="width: 18rem; margin-right: auto; margin-left: auto; margin-top: 180px;  height: 350px; width: 450px;">
+                <div class="card-header  ">
+                   <strong> LOGIN</strong>
+                </div>
+                <ul class="list-group list-group-flush bg bg-dark mt-3">
+                    <li class="list-group-item bg bg-dark mt-3"><input type="text"  id="id" name="uid" class="form-control" formControlName="id" placeholder="User Id" required><br>
+                        <div *ngIf="(this.loginForm.get('id')?.touched||this.loginForm.get('id')?.dirty)&& this.loginForm.get('id')?.errors" class="error">Invalid Account Number</div>
+                    </li>
+                    <li class="list-group-item bg bg-dark"><input type="password"  id="password" name="pswd" class="form-control" formControlName="pswd" placeholder="Enter Password" required><br>
+                        <div *ngIf="(this.loginForm.get('pswd')?.touched||this.loginForm.get('pswd')?.dirty)&& this.loginForm.get('pswd')?.errors" class="error">Invalid Password</div>
+
+                    </li>
+                </ul>
+                <button type="submit"  class="btn btn-light w-50 mt-3" style="margin-left: auto;margin-right: auto;">login</button>
+                <a style="text-decoration:none; color: darkblue; border: solid; background-color: cornsilk; width: 100px;margin-left: auto;margin-right: auto;margin-top: 5px;" routerLink="register">Register</a>
+            </div>
+        </div>
+    </form>
+</body>

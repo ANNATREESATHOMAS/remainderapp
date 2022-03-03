@@ -1,0 +1,77 @@
+<body class="eventdel">
+    <div class="container-fluid" style="display: flex; justify-content:space-around ; ">
+        <div class="row" >
+            <div class="col-lg-12 col-md-12">
+                <div class="card text-white" style="height: 200px; width: 400px; background-color: rgb(26, 10, 49); margin-top: 100px;">
+                    <h5 class="card-header">Delete Account</h5>
+                    <div class="card-body">
+                        <p class="card-text">Are you sure you want to delete this event</p>
+                        <button (click)="delete()" style="background-color: darkgoldenrod;">Delete Account</button> <br><br>
+                        
+        
+                    </div>
+                    
+                </div> 
+    
+                
+            </div>
+          
+            
+            <!-- <div class="col-lg-6 col-md-6">
+                <div class="card text-white" style="height: 200px; width: 400px; background-color: rgb(12, 10, 57); margin-top: 100px;">
+                    <h5 class="card-header">Delete Events</h5>
+                    <div class="card-body">
+                        <p class="card-text">Are you sure you want to delete this event</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            style="background-color: darkgoldenrod;">
+                            Delete Event
+                        </button><br><br>
+                       
+        
+                    </div>
+                    
+                </div> 
+    
+                
+            </div>-->
+            <a style=" margin-top: 50px; text-decoration:none; color: rgb(140, 140, 154); border: solid; background-color: rgb(129, 15, 157); width: 150px; text-align: center; margin-left: auto; margin-right: auto;"
+                        routerLink="/dashboard">Dashboard</a> 
+        </div>
+        
+    </div>
+    <!-- Button trigger modal -->
+    
+    
+    
+    <!-- Modal -->
+    <!-- <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content text-white" style="background-color:rgb(167, 135, 27);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add events to delete here</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" [formGroup]="eventForm" (ngSubmit)="deleteevent()">
+                        <label for="eventName">Name your Event</label>
+                        <input type="text" id="eventName" name="eventName" formControlName="eventName" class="form-control"
+                            required=""><br>
+                        <div *ngIf="(this.eventForm.get('eventName')?.touched||this.eventForm.get('eventName')?.dirty)&& this.eventForm.get('eventName')?.errors"
+                            class="error">Invalid input</div>
+    
+    
+                        <label for="eventDate">Date of the event</label>
+                        <input type="date" id="eventDate" name="eventDate" formControlName="eventDate" class="form-control"
+                            required=""><br>
+                        <div *ngIf="(this.eventForm.get('eventDate')?.touched||this.eventForm.get('eventDate')?.dirty)&& this.eventForm.get('eventDate')?.errors"
+                            class="error">Invalid input</div>
+    
+    
+                        <button type="submit" class="btn btn-secondary" style="background-color: rgb(132, 13, 13);">Delete
+                            Event</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
